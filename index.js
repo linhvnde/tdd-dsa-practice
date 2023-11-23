@@ -1,11 +1,11 @@
 function solve(direction, x, y, width, height) {
-  if (direction === 'U') {
+  if (direction === 'U' && y > 0) {
     y--;
-  } else if (direction === 'D') {
+  } else if (direction === 'D' && y < height - 1) {
     y++;
-  } else if (direction === 'L') {
+  } else if (direction === 'L' && x > 0) {
     x--;
-  } else if (direction === 'R') {
+  } else if (direction === 'R' && x < width - 1) {
     x++;
   }
   return [x,y]
